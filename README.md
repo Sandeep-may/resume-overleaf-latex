@@ -14,7 +14,7 @@ Get started quickly using [Overleaf](https://www.overleaf.com/latex/templates/so
 
 ```sh
 docker build -t latex .
-docker run --rm -i -v "$PWD":/data latex pdflatex sourabh_bajaj_resume.tex
+docker run --rm -i -v "$PWD":/data latex pdflatex Sandeep_Reddy_Resume.tex
 ```
 
 ### Preview
@@ -23,4 +23,4 @@ docker run --rm -i -v "$PWD":/data latex pdflatex sourabh_bajaj_resume.tex
 
 ### License
 
-Format is MIT but all the data is owned by Sourabh Bajaj.
+Format is MIT but all the data is owned by Sandeep Reddy.

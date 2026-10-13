@@ -135,18 +135,40 @@
    \resumeSubSubheading
     {PayStep}{Backend}
     \resumeItemListStart
+      % \resumeSubSubItem
+      %   {Successfully led Java 17 to 21 migration and implemented TransactionGuard — a protective transaction feature that significantly reduced payment friction and improved overall transaction reliability.}
+      % \resumeSubSubItem
+      %   {Decoupled application and batch logic into separate modules (common, app, batch), improving release efficiency and maintainability in an Agile environment.}
       \resumeSubSubItem
-        {Successfully led Java 17 to 21 migration and implemented TransactionGuard — a protective transaction feature that significantly reduced payment friction and improved overall transaction reliability.}
+        {Delivered the JID migration (JID retrieves a member's saved credit cards), a 123-file change. Resolved a production-blocking session-deserialization 500 error by deprecating legacy fields and adding V2 fields, keeping the rollout backward-compatible.}
       \resumeSubSubItem
-        {Decoupled application and batch logic into separate modules (common, app, batch), improving release efficiency and maintainability in an Agile environment.}  
+        {Hardened security and compliance by removing AWS SES credentials from Git and moving to AWS instance-role access.}
+      \resumeSubSubItem
+        {Designed a zero-downtime key-rotation framework (single key, dual-key grace period, cutover). The design avoided risky production schema changes and spans every payment entry point, deferred flow, batch job, and downstream integration.}
+      \resumeSubSubItem
+        {Onboarded 15+ merchant clients end to end (service config, SQL data, PRO operations). Built a default mail-template feature that removes per-client template work.}
+      \resumeSubSubItem
+        {Owned multiple production releases, preparing release branches, manuals, STG tests, test reports, and PRO paperwork.}
+      \resumeSubSubItem
+        {Investigated Java 21 (Corretto) readiness and produced a dependency-check report.}
+      \resumeSubSubItem
+        {Led the batch redesign investigation and PoC to decouple batch jobs from application releases, which previously doubled release effort. Built the mail-batch PoC on a container and the shared paystep\_common module, and evaluated Spring Batch against the current design.}
     \resumeItemListEnd
   \resumeSubSubheading
     {PayVault JS}{Frontend}
     \resumeItemListStart
+    % \resumeSubSubItem
+    %     {Built the new Customer\_PV\_JS product from scratch, based on the existing PayVault\_JS\_v7 codebase. This product is tailored exclusively for external clients (non-Rakuten).}
+    % \resumeSubSubItem
+    %     {Key improvements over PayVault\_JS\_v7 include enhanced logging for attack monitoring and debugging, a cleaner and more maintainable codebase, significantly expanded unit test coverage, and newly added integration tests.}
     \resumeSubSubItem
-        {Built the new Customer\_PV\_JS product from scratch, based on the existing PayVault\_JS\_v7 codebase. This product is tailored exclusively for external clients (non-Rakuten).}
+        {Delivered UnionPay card brand support (BIN ranges 62 and 81) with 100\% coverage on the card-validation and validator modules, and eliminated critical and high-severity dependency vulnerabilities by migrating off the unmaintained validate.js and upgrading the Node.}
     \resumeSubSubItem
-        {Key improvements over PayVault\_JS\_v7 include enhanced logging for attack monitoring and debugging, a cleaner and more maintainable codebase, significantly expanded unit test coverage, and newly added integration tests.}
+        {Resolved a production camera-freeze bug in the card-scan modal on Android. The camera froze when the screen was turned off and the user tapped re-scan, on Android devices. I fixed it by re-initialising the camera stream. I also verified the fix across multiple Android and iOS devices with screen-lock scenarios.}
+    \resumeSubSubItem
+        {Strengthened observability and API integration reliability by improved logging.}
+    \resumeSubSubItem
+        {Owned end-to-end prod release delivery for the SDK. This included release PRs, QA reports, release manuals, cross-device testing (Android, Mac, iPadOS) and Cypress E2E and Jest unit test suites. Unit coverage was improved from around 60\% to about 85\%.}
     \resumeItemListEnd
 
       
@@ -184,7 +206,7 @@
 \section{Core Responsibilities}
   \resumeSubHeadingListStart
     \resumeSubSubItem
-      {Cross-functional team collaboration, full SDLC, code reviews, mentoring junior developers.}
+      {Cross-functional team collaboration, full SDLC, code reviews, mentoring junior developers, interviewing candidates.}
   \resumeSubHeadingListEnd    
 
 %--------SKILLS------------
@@ -205,18 +227,18 @@
     % \resumeItemListEnd    
 
 %-----------PROJECTS-----------------
-\section{Projects}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Restaurant App Food Delivery}{\href{https://github.com/Sandeep-may/restaurant-app}{GitHub}}
-      {React Native, Node.js, PostgreSQL, Docker, OCI}{}
-        \resumeItemListStart
-          \resumeSubSubItem
-            {Architected and developed a production-scale monorepo for a restaurant MVP, featuring a React Native mobile client and a Node.js/Express REST API.}
-          \resumeSubSubItem  
-            {Containerized the backend using Docker and Docker Compose, streamlining deployment to OCI with PostgreSQL and automated Prisma migrations. Engineered robust middleware for CORS, logging (Morgan), and centralized error handling, ensuring a scalable and maintainable codebase.}
-        \resumeItemListEnd
-  \resumeSubHeadingListEnd
+% \section{Projects}
+%   \resumeSubHeadingListStart
+%     \resumeSubheading
+%       {Restaurant App Food Delivery}{\href{https://github.com/Sandeep-may/restaurant-app}{GitHub}}
+%       {React Native, Node.js, PostgreSQL, Docker, OCI}{}
+%         \resumeItemListStart
+%           \resumeSubSubItem
+%             {Architected and developed a production-scale monorepo for a restaurant MVP, featuring a React Native mobile client and a Node.js/Express REST API.}
+%           \resumeSubSubItem
+%             {Containerized the backend using Docker and Docker Compose, streamlining deployment to OCI with PostgreSQL and automated Prisma migrations. Engineered robust middleware for CORS, logging (Morgan), and centralized error handling, ensuring a scalable and maintainable codebase.}
+%         \resumeItemListEnd
+%   \resumeSubHeadingListEnd
 
 %-------------------------------------------
 \end{document}
